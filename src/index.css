@@ -1,0 +1,160 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page */
+body {
+    font-family: Arial, sans-serif;
+    background:
+        radial-gradient(circle at 10% 10%, #fce1e8 0%, transparent 30%),
+        radial-gradient(circle at 90% 40%, #e0eee5 0%, transparent 30%),
+        #fff8f1;
+    color: #29252a;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Signup and login form fields */
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-height: 58px;
+    padding: 16px 18px;
+    margin-top: 12px;
+
+    border: 1px solid #e5d8d0;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #29252a;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Input focus effect */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d9433d;
+    box-shadow: 0 0 0 4px rgba(217, 67, 61, 0.10);
+}
+
+/* Placeholder text */
+input::placeholder,
+textarea::placeholder {
+    color: #aaa1a0;
+}
+
+/* Text areas */
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Form labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #29252a;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Form spacing */
+form {
+    width: 100%;
+}
+
+/* Submit buttons */
+form button[type="submit"] {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 16px;
+
+    font-size: 17px;
+    font-weight: 800;
+    border-radius: 13px;
+}
+
+/* Signup account type cards */
+button strong {
+    line-height: 1.4;
+}
+
+/* Responsive design for tablets and mobile */
+@media (max-width: 768px) {
+    /* Main form page */
+    .page {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    /* Form card */
+    .pageCard {
+        padding: 28px 22px;
+    }
+
+    /* Signup choice cards */
+    .pageCard form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 520px) {
+    /* Stack signup choice cards vertically */
+    .pageCard .choice {
+        min-height: 120px;
+    }
+
+    /* Reduce heading size on small screens */
+    h1 {
+        font-size: 32px !important;
+    }
+
+    /* Reduce card padding */
+    .pageCard {
+        padding: 24px 18px;
+    }
+
+    /* Slightly smaller mobile inputs */
+    input,
+    select,
+    textarea {
+        min-height: 54px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 768px) {
+    .page {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    .pageCard {
+        padding: 28px 22px !important;
+    }
+}
+
+@media (max-width: 520px) {
+    .signupChoices {
+        grid-template-columns: 1fr !important;
+    }
+
+    .pageCard {
+        padding: 24px 18px !important;
+    }
+}
